@@ -1,0 +1,34 @@
+@mixin table-head() {
+	background: rgba(250, 250, 250, 1);
+	font-size: 14px;
+	font-weight: 500;
+	color: rgba(0, 0, 0, 0.85);
+}
+
+.table-view {
+	position: relative;
+	width: 100%;
+	overflow-x: scroll;
+	.column-holder {
+		position: relative;
+		white-space: nowrap;
+		.table-column {
+			display: inline-block;
+			font-size: 14px;
+			font-weight: 400;
+			color: rgba(0, 0, 0, 0.65);
+			.item {
+				&:first-child {
+					@include table-head();
+				}
+				box-sizing: border-box;
+				padding: 10px 16px;
+				text-align: left;
+				overflow: hidden;
+				white-space: nowrap;
+				text-overflow: ellipsis;
+				border-bottom: 1px solid rgb(249, 249, 249);
+			}
+		}
+	}
+}
