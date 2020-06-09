@@ -1,10 +1,3 @@
-@mixin table-head() {
-	background: rgba(250, 250, 250, 1);
-	font-size: 14px;
-	font-weight: 500;
-	color: rgba(0, 0, 0, 0.85);
-}
-
 .table-view {
 	position: relative;
 	width: 100%;
@@ -19,7 +12,11 @@
 			color: rgba(0, 0, 0, 0.65);
 			.item {
 				&:first-child {
-					@include table-head();
+					background: rgba(250, 250, 250, 1);
+					font-size: 14px;
+					font-weight: 500;
+					color: rgba(0, 0, 0, 0.85);
+					overflow: visible;
 				}
 				box-sizing: border-box;
 				padding: 10px 16px;

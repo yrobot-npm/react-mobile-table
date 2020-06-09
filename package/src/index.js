@@ -3,7 +3,7 @@
  * @time 2020.6.9
  */
 import React, { useState } from 'react'
-import './index.scss'
+import './index.less'
 
 // 生成一个长度为len的数组，并返回以index为参数的闭包
 const getArray = (len) => (fn) => [...Array(len)].map((v, i) => fn(i))
@@ -27,7 +27,7 @@ const getWidthPercent = (data) => {
 const MobileTable = ({ data = [[]] }) => {
 	const [columnFolds, setFolds] = useState(data[0].map(() => true))
 	const switchFold = (i) => {
-		let newColumnFolds = [...columnFolds]
+		let newColumnFolds = columnFolds.slice()
 		newColumnFolds[i] = !newColumnFolds[i]
 		setFolds(newColumnFolds)
 	}
@@ -39,6 +39,7 @@ const MobileTable = ({ data = [[]] }) => {
 			<div className="column-holder">
 				{getArray(columnSize)((columnIndex) => (
 					<div
+						key={`cloumn${columnIndex}`}
 						className="table-column"
 						style={{
 							minWidth: widthPercent[columnIndex] + '%',
@@ -51,7 +52,9 @@ const MobileTable = ({ data = [[]] }) => {
 						}}
 					>
 						{getArray(lineSize)((lineIndex) => (
-							<div className="item">{data[lineIndex][columnIndex]}</div>
+							<div key={`cloumn${columnIndex}line${lineIndex}`} className="item">
+								{data[lineIndex][columnIndex]}
+							</div>
 						))}
 					</div>
 				))}
