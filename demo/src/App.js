@@ -15,11 +15,6 @@ function App() {
 		<div className="app">
 			<div className="table-holder">
 				<MobileTable data={mockData} />
-				<span>A</span>
-				<span>a</span>
-				<span>1</span>
-				<span>中</span>
-				<span>.</span>
 			</div>
 		</div>
 	)

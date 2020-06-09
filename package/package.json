@@ -1,6 +1,6 @@
 {
 	"name": "@yrobot/react-mobile-table",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"description": "@yrobot 基于react实现的移动端table",
 	"main": "lib/index.js",
 	"keywords": [
@@ -18,6 +18,10 @@
 	"scripts": {
 		"start": "rollup -c",
 		"build": "rm -rf lib && rm -rf src/lib && rollup -c"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Yrobot/react-mobile-table.git"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.4.0",
