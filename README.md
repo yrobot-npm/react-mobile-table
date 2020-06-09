@@ -10,7 +10,7 @@
 
 ## 查看demo
 
-之后完善线上demo的url
+注意使用浏览器的手机模式查看[DEMO](https://yrobot.github.io/react-mobile-table/demo/dist/index.html)
 
 ## 使用
 

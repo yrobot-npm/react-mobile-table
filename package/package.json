@@ -1,6 +1,6 @@
 {
 	"name": "@yrobot/react-mobile-table",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"description": "@yrobot 基于react实现的移动端table",
 	"main": "lib/index.js",
 	"keywords": [
