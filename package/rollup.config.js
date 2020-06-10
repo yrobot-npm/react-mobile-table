@@ -33,7 +33,8 @@ export default {
 		postcss({
 			minimize: true, // uses cssnano behind scene
 			modules: false, // enable css modules
-			use: [['less', { javascriptEnabled: true }]],
+			extract: true,
+			use: ['less'],
 			extensions: ['.css', '.scss', '.sass', '.less'], // uses node-sass
 		}),
 

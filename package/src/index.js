@@ -35,12 +35,12 @@ const MobileTable = ({ data = [[]] }) => {
 	const columnSize = data[0].length || 0
 	const widthPercent = getWidthPercent(data)
 	return (
-		<div className="table-view">
-			<div className="column-holder">
+		<div className="react-mobile-table">
+			<div className="react-mobile-table-column-holder">
 				{getArray(columnSize)((columnIndex) => (
 					<div
 						key={`cloumn${columnIndex}`}
-						className="table-column"
+						className="react-mobile-table-table-column"
 						style={{
 							minWidth: widthPercent[columnIndex] + '%',
 							width: columnFolds[columnIndex]
@@ -52,7 +52,7 @@ const MobileTable = ({ data = [[]] }) => {
 						}}
 					>
 						{getArray(lineSize)((lineIndex) => (
-							<div key={`cloumn${columnIndex}line${lineIndex}`} className="item">
+							<div key={`cloumn${columnIndex}line${lineIndex}`} className="react-mobile-table-item">
 								{data[lineIndex][columnIndex]}
 							</div>
 						))}

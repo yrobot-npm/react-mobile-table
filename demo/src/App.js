@@ -1,6 +1,7 @@
 import React from 'react'
 import './App.css'
 import MobileTable from '@yrobot/react-mobile-table'
+import '@yrobot/react-mobile-table/lib/index.css'
 
 const mockData = [
 	['ID', 'Name', 'Age', 'Address'],

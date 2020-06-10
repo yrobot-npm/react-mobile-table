@@ -22,6 +22,7 @@ yarn add @yrobot/react-mobile-table
 2. 引入组件并使用
 ```
 import MobileTable from '@yrobot/react-mobile-table'
+import '@yrobot/react-mobile-table/lib/index.css'
 
 const data = [
 	['ID', 'Name', 'Age', 'Address'], // title line
