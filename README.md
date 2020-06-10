@@ -9,7 +9,7 @@
 6. 点击展开列可以恢复收缩状态
 
 ## 查看demo
-
+![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfn15t5e25g30cg0qodly.gif)  
 注意使用浏览器的手机模式查看[DEMO](https://yrobot.github.io/react-mobile-table/demo/dist/index.html)
 
 ## 使用
