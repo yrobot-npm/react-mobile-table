@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 
 function _slicedToArray(arr, i) {
   return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest();
@@ -83,15 +83,61 @@ var getArray = function getArray(len) {
 
 String.prototype.getCharSize = function () {
   return this.replace(/[^\u0000-\u00ff]/g, '  ').length;
+}; // 根据传入的宽度百分比，自动优化，防止过小的列
+
+
+var autoSize = function autoSize() {
+  var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+  var titles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
+  var fontSize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 14;
+  var MIN_SIZE = Math.max.apply(Math, _toConsumableArray(titles.map(function (v) {
+    return (v + '').getCharSize();
+  }))) / 2 * fontSize + 16; // 根据(最长title字长+padding=计算MIN_SIZE)计算MIN_SIZE
+
+  var MIN_WIDTH_P = MIN_SIZE / 375 * 100;
+  var LEN = arr.length; // 如果平均宽度都到不了MIN_WIDTH_P，直接返回arr
+
+  if (MIN_WIDTH_P > 100 / LEN) return arr;
+  var subCount = 0; // 记录所有小于MIN_WIDTH_P的缺值和
+
+  var overCount = 0; // 记录所有大于MIN_WIDTH_P的超值和
+
+  arr.map(function (v) {
+    if (v > MIN_WIDTH_P) {
+      overCount += v - MIN_WIDTH_P;
+    } else {
+      subCount += MIN_WIDTH_P - v;
+    }
+  });
+  if (subCount === 0) return arr; // 所有数据都大于MIN_WIDTH_P，直接返回arr
+
+  var overRate = (overCount - subCount) / overCount; // 计算超出值的缩放比例
+
+  return arr.map(function (v) {
+    if (v > MIN_WIDTH_P) {
+      return MIN_WIDTH_P + (v - MIN_WIDTH_P) * overRate;
+    } else {
+      return MIN_WIDTH_P;
+    }
+  });
 }; // 根据传入的data配置每一列的宽度百分比
 
 
 var getWidthPercent = function getWidthPercent(data) {
+  var titleWeigth = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 10;
+  var contentWeight = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 1;
   var widthLen = [];
   var count = 0;
-  data[0].map(function (str, i) {
-    widthLen[i] = str.getCharSize();
-    count += str.getCharSize();
+  data.map(function () {
+    var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
+    var index = arguments.length > 1 ? arguments[1] : undefined;
+    var base = (index > 0 ? contentWeight : titleWeigth) / 1;
+    arr.map(function (item, i) {
+      widthLen[i] = (widthLen[i] || 0) + (item + '').getCharSize() * base;
+    });
+  });
+  widthLen.map(function (len) {
+    count += len;
   });
   return widthLen.map(function (v) {
     return v * 100 / count;
@@ -117,7 +163,9 @@ var MobileTable = function MobileTable(_ref) {
 
   var lineSize = data.length || 0;
   var columnSize = data[0].length || 0;
-  var widthPercent = getWidthPercent(data);
+  var widthPercent = useMemo(function () {
+    return autoSize(getWidthPercent(data), data[0]);
+  }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "react-mobile-table"
   }, /*#__PURE__*/React.createElement("div", {

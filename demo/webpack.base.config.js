@@ -41,6 +41,7 @@ module.exports = {
 	resolve: {
 		alias: {
 			react: path.resolve('./node_modules/react'),
+			'@yrobot/react-mobile-table': path.resolve('../package'),
 		},
 	},
 }
