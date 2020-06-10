@@ -88,12 +88,8 @@ String.prototype.getCharSize = function () {
 
 var autoSize = function autoSize() {
   var arr = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
-  var titles = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
-  var fontSize = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 14;
-  var MIN_SIZE = Math.max.apply(Math, _toConsumableArray(titles.map(function (v) {
-    return (v + '').getCharSize();
-  }))) / 2 * fontSize + 16; // 根据(最长title字长+padding=计算MIN_SIZE)计算MIN_SIZE
-
+  var MIN_SIZE = arguments.length > 1 ? arguments[1] : undefined;
+  // const MIN_SIZE = (Math.max(...titles.map((v) => (v + '').getCharSize())) / 2) * fontSize + 16 // 根据(最长title字长+padding=计算MIN_SIZE)计算MIN_SIZE
   var MIN_WIDTH_P = MIN_SIZE / 375 * 100;
   var LEN = arr.length; // 如果平均宽度都到不了MIN_WIDTH_P，直接返回arr
 
@@ -146,7 +142,9 @@ var getWidthPercent = function getWidthPercent(data) {
 
 var MobileTable = function MobileTable(_ref) {
   var _ref$data = _ref.data,
-      data = _ref$data === void 0 ? [[]] : _ref$data;
+      data = _ref$data === void 0 ? [[]] : _ref$data,
+      _ref$columnMinWidth = _ref.columnMinWidth,
+      columnMinWidth = _ref$columnMinWidth === void 0 ? 69 : _ref$columnMinWidth;
 
   var _useState = useState(data[0].map(function () {
     return true;
@@ -164,7 +162,7 @@ var MobileTable = function MobileTable(_ref) {
   var lineSize = data.length || 0;
   var columnSize = data[0].length || 0;
   var widthPercent = useMemo(function () {
-    return autoSize(getWidthPercent(data), data[0]);
+    return autoSize(getWidthPercent(data), columnMinWidth);
   }, []);
   return /*#__PURE__*/React.createElement("div", {
     className: "react-mobile-table"
