@@ -4,12 +4,19 @@ import MobileTable from '@yrobot/react-mobile-table';
 import '@yrobot/react-mobile-table/lib/index.css';
 
 const data = [
-	['ID', 'Name', 'Age', 'Address'], // title line
-	['1', 'John Brown', 32, 'New York No. 1 Lake Park, New York No. 1 Lake Park'],
-	['2', 'Jim Green', 42, 'London No. 2 Lake Park, London No. 2 Lake Park'],
-	['3', 'Joe Black', 32, 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park'],
-	['4', 'Joe Green jsdkk sdkksdqww', 36, 'Sidney NOOOOOO'],
+	['ID', '姓名', 'Age', 'Address'], // title line
+	['1', '杨弱爆', 32, 'New York No. 1 Lake Park, New York No. 1 Lake Park'],
+	['2', '杨弱爆', 42, 'London No. 2 Lake Park, London No. 2 Lake Park'],
+	['3', '杨弱爆', 32, 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park'],
+	['4', '杨弱爆 jsdkk sdkksdqww', 36, 'Sidney NOOOOOO'],
 ];
+// const data = [
+// 	['ID', 'Name', 'Age', 'Address'], // title line
+// 	['1', 'John Brown', 32, 'New York No. 1 Lake Park, New York No. 1 Lake Park'],
+// 	['2', 'Jim Green', 42, 'London No. 2 Lake Park, London No. 2 Lake Park'],
+// 	['3', 'Joe Black', 32, 'Sidney No. 1 Lake Park, Sidney No. 1 Lake Park'],
+// 	['4', 'Joe Green jsdkk sdkksdqww', 36, 'Sidney NOOOOOO'],
+// ];
 
 function App() {
 	return (

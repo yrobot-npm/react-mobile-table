@@ -42,3 +42,7 @@ const data = [
 />
 
 ```
+
+## 版本更新log
+#### v1.1.2 [fix bug]
+1. 添加line-height，修复特殊字体中英文行高不一致的情况
