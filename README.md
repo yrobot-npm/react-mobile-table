@@ -12,7 +12,7 @@
 ## 查看 demo
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfn15t5e25g30cg0qodly.gif)  
-注意使用浏览器的手机模式查看[DEMO](https://yrobot.github.io/react-mobile-table/demo/dist/index.html)
+注意使用浏览器的手机模式查看[DEMO](https://yrobot.github.io/react-mobile-table/demo/dist)
 
 ## 使用
 
