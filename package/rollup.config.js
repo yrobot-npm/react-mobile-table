@@ -1,9 +1,10 @@
-import external from 'rollup-plugin-peer-deps-external'
-import resolve from 'rollup-plugin-node-resolve'
-import filesize from 'rollup-plugin-filesize'
-import progress from 'rollup-plugin-progress'
-import postcss from 'rollup-plugin-postcss'
-import babel from 'rollup-plugin-babel'
+import external from 'rollup-plugin-peer-deps-external';
+import resolve from 'rollup-plugin-node-resolve';
+import filesize from 'rollup-plugin-filesize';
+import progress from 'rollup-plugin-progress';
+import postcss from 'rollup-plugin-postcss';
+import babel from 'rollup-plugin-babel';
+import { terser } from "rollup-plugin-terser";
 
 export default {
 	input: 'src/index.js',
@@ -26,6 +27,7 @@ export default {
 			include: ['**/*'],
 			exclude: 'node_modules/**',
 		}),
+		terser(),
 
 		// Automatically externalize peerDependencies in a rollup bundle.
 		external(),
@@ -44,4 +46,4 @@ export default {
 		progress({ clearLine: false }),
 	],
 	external: ['react', 'react-dom'],
-}
+};

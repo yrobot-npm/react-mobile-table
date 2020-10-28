@@ -46,3 +46,8 @@ const data = [
 ## 版本更新log
 #### v1.1.2 [fix bug]
 1. 添加line-height，修复特殊字体中英文行高不一致的情况
+
+#### v1.1.3 [fix bug]
+1. 适配仓库兼容react版本15（使用memoize-one缓存计算结果）  
+2. 组件库添加terser压缩js代码  
+3. demo添加分页效果
