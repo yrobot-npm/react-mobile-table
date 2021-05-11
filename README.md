@@ -9,6 +9,9 @@
 5. 展开列后可以左右滑动 table 查看
 6. 点击展开列可以恢复收缩状态
 
+## 利用codesandbox查看
+[view in codesandbox](https://codesandbox.io/s/react-mobile-table-jrled?file=/src/App.js)
+
 ## 查看 demo
 
 ![](https://tva1.sinaimg.cn/large/007S8ZIlly1gfn15t5e25g30cg0qodly.gif)  
