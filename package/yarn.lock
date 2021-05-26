@@ -2,19 +2,19 @@
 # yarn lockfile v1
 
 
-"@babel/code-frame@^7.0.0", "@babel/code-frame@^7.10.4":
-  version "7.10.4"
-  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
-  integrity sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==
-  dependencies:
-    "@babel/highlight" "^7.10.4"
-
 "@babel/code-frame@^7.10.1":
   version "7.10.1"
   resolved "https://registry.npm.taobao.org/@babel/code-frame/download/@babel/code-frame-7.10.1.tgz?cache=0&sync_timestamp=1590617374675&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40babel%2Fcode-frame%2Fdownload%2F%40babel%2Fcode-frame-7.10.1.tgz#d5481c5095daa1c57e16e54c6f9198443afb49ff"
   integrity sha1-1UgcUJXaocV+FuVMb5GYRDr7Sf8=
   dependencies:
     "@babel/highlight" "^7.10.1"
+
+"@babel/code-frame@^7.10.4":
+  version "7.10.4"
+  resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.10.4.tgz#168da1a36e90da68ae8d49c0f1b48c7c6249213a"
+  integrity sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==
+  dependencies:
+    "@babel/highlight" "^7.10.4"
 
 "@babel/compat-data@^7.10.1":
   version "7.10.1"
@@ -1071,14 +1071,15 @@ brotli-size@4.0.0:
     duplexer "0.1.1"
 
 browserslist@^4.0.0, browserslist@^4.12.0, browserslist@^4.8.5:
-  version "4.12.0"
-  resolved "https://registry.npm.taobao.org/browserslist/download/browserslist-4.12.0.tgz#06c6d5715a1ede6c51fc39ff67fd647f740b656d"
-  integrity sha1-BsbVcVoe3mxR/Dn/Z/1kf3QLZW0=
+  version "4.16.6"
+  resolved "https://registry.yarnpkg.com/browserslist/-/browserslist-4.16.6.tgz#d7901277a5a88e554ed305b183ec9b0c08f66fa2"
+  integrity sha512-Wspk/PqO+4W9qp5iUTJsa1B/QrYn1keNCcEP5OvP7WBwT4KaDly0uONYmC6Xa3Z5IqnUgS0KcgLYu1l74x0ZXQ==
   dependencies:
-    caniuse-lite "^1.0.30001043"
-    electron-to-chromium "^1.3.413"
-    node-releases "^1.1.53"
-    pkg-up "^2.0.0"
+    caniuse-lite "^1.0.30001219"
+    colorette "^1.2.2"
+    electron-to-chromium "^1.3.723"
+    escalade "^3.1.1"
+    node-releases "^1.1.71"
 
 buffer-from@^1.0.0:
   version "1.1.1"
@@ -1124,10 +1125,10 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001043:
-  version "1.0.30001079"
-  resolved "https://registry.npm.taobao.org/caniuse-lite/download/caniuse-lite-1.0.30001079.tgz#ed3e5225cd9a6850984fdd88bf24ce45d69b9c22"
-  integrity sha1-7T5SJc2aaFCYT92IvyTORdabnCI=
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001219:
+  version "1.0.30001230"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001230.tgz#8135c57459854b2240b57a4a6786044bdc5a9f71"
+  integrity sha512-5yBd5nWCBS+jWKTcHOzXwo5xzcj4ePE/yjtkZyUV1BTUmrBaA9MRGC+e7mxnqXSA90CmCA8L3eKLaSUkt099IQ==
 
 caseless@~0.12.0:
   version "0.12.0"
@@ -1228,6 +1229,11 @@ color@^3.0.0:
   dependencies:
     color-convert "^1.9.1"
     color-string "^1.5.2"
+
+colorette@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/colorette/-/colorette-1.2.2.tgz#cbcc79d5e99caea2dbf10eb3a26fd8b3e6acfa94"
+  integrity sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==
 
 colors@^1.3.3:
   version "1.4.0"
@@ -1518,10 +1524,10 @@ ecc-jsbn@~0.1.1:
     jsbn "~0.1.0"
     safer-buffer "^2.1.0"
 
-electron-to-chromium@^1.3.413:
-  version "1.3.465"
-  resolved "https://registry.npm.taobao.org/electron-to-chromium/download/electron-to-chromium-1.3.465.tgz#d692e5c383317570c2bd82092a24a0308c6ccf29"
-  integrity sha1-1pLlw4MxdXDCvYIJKiSgMIxszyk=
+electron-to-chromium@^1.3.723:
+  version "1.3.739"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.739.tgz#f07756aa92cabd5a6eec6f491525a64fe62f98b9"
+  integrity sha512-+LPJVRsN7hGZ9EIUUiWCpO7l4E3qBYHNadazlucBfsXBbccDFNKUBAgzE68FnkWGJPwD/AfKhSzL+G+Iqb8A4A==
 
 emoji-regex@^7.0.1:
   version "7.0.3"
@@ -1589,6 +1595,11 @@ es-to-primitive@^1.2.1:
     is-callable "^1.1.4"
     is-date-object "^1.0.1"
     is-symbol "^1.0.2"
+
+escalade@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.1.1.tgz#d8cfdc7000965c5a0174b4a82eaa5c0552742e40"
+  integrity sha512-k0er2gUkLf8O0zKJiAhmkTnJlTvINGv7ygDNPbeIsX/TJjGJZHuh9B2UxbsaEkmlEo9MfhrSzmhIlhRlI2GXnw==
 
 escape-string-regexp@^1.0.2, escape-string-regexp@^1.0.5:
   version "1.0.5"
@@ -1662,13 +1673,6 @@ filesize@^4.1.2:
   version "4.2.1"
   resolved "https://registry.npm.taobao.org/filesize/download/filesize-4.2.1.tgz#ab1cb2069db5d415911c1a13e144c0e743bc89bc"
   integrity sha1-qxyyBp211BWRHBoT4UTA50O8ibw=
-
-find-up@^2.1.0:
-  version "2.1.0"
-  resolved "https://registry.npm.taobao.org/find-up/download/find-up-2.1.0.tgz#45d1b7e506c717ddd482775a2b77920a3c0c57a7"
-  integrity sha1-RdG35QbHF93UgndaK3eSCjwMV6c=
-  dependencies:
-    locate-path "^2.0.0"
 
 forever-agent@~0.6.1:
   version "0.6.1"
@@ -1978,14 +1982,6 @@ isstream@~0.1.2:
   resolved "https://registry.npm.taobao.org/isstream/download/isstream-0.1.2.tgz#47e63f7af55afa6f92e1500e690eb8b8529c099a"
   integrity sha1-R+Y/evVa+m+S4VAOaQ64uFKcCZo=
 
-jest-worker@^24.0.0:
-  version "24.9.0"
-  resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-24.9.0.tgz#5dbfdb5b2d322e98567898238a9697bcce67b3e5"
-  integrity sha512-51PE4haMSXcHohnSMdM42anbvZANYTqMrr52tVKPqqsPJMzoP6FYYDVqahX/HrAoKEKz3uUPzSvKs9A3qR4iVw==
-  dependencies:
-    merge-stream "^2.0.0"
-    supports-color "^6.1.0"
-
 jest-worker@^26.2.1:
   version "26.6.1"
   resolved "https://registry.yarnpkg.com/jest-worker/-/jest-worker-26.6.1.tgz#c2ae8cde6802cc14056043f997469ec170d9c32a"
@@ -2114,14 +2110,6 @@ loader-utils@^1.1.0:
     emojis-list "^3.0.0"
     json5 "^1.0.1"
 
-locate-path@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/locate-path/download/locate-path-2.0.0.tgz#2b568b265eec944c6d9c0de9c3dbbbca0354cd8e"
-  integrity sha1-K1aLJl7slExtnA3pw9u7ygNUzY4=
-  dependencies:
-    p-locate "^2.0.0"
-    path-exists "^3.0.0"
-
 lodash.camelcase@^4.3.0:
   version "4.3.0"
   resolved "https://registry.npm.taobao.org/lodash.camelcase/download/lodash.camelcase-4.3.0.tgz#b28aa6288a2b9fc651035c7711f65ab6190331a6"
@@ -2224,10 +2212,10 @@ node-fetch@^1.0.1:
     encoding "^0.1.11"
     is-stream "^1.0.1"
 
-node-releases@^1.1.53:
-  version "1.1.58"
-  resolved "https://registry.npm.taobao.org/node-releases/download/node-releases-1.1.58.tgz?cache=0&sync_timestamp=1591162286391&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fnode-releases%2Fdownload%2Fnode-releases-1.1.58.tgz#8ee20eef30fa60e52755fcc0942def5a734fe935"
-  integrity sha1-juIO7zD6YOUnVfzAlC3vWnNP6TU=
+node-releases@^1.1.71:
+  version "1.1.72"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-1.1.72.tgz#14802ab6b1039a79a0c7d662b610a5bbd76eacbe"
+  integrity sha512-LLUo+PpH3dU6XizX3iVoubUNheF/owjXCZZ5yACDxNnPtgFuludV1ZL3ayK1kVep42Rmm0+R9/Y60NQbZ2bifw==
 
 normalize-url@^3.0.0:
   version "3.3.0"
@@ -2294,20 +2282,6 @@ p-finally@^1.0.0:
   resolved "https://registry.npm.taobao.org/p-finally/download/p-finally-1.0.0.tgz#3fbcfb15b899a44123b34b6dcc18b724336a2cae"
   integrity sha1-P7z7FbiZpEEjs0ttzBi3JDNqLK4=
 
-p-limit@^1.1.0:
-  version "1.3.0"
-  resolved "https://registry.npm.taobao.org/p-limit/download/p-limit-1.3.0.tgz#b86bd5f0c25690911c7590fcbfc2010d54b3ccb8"
-  integrity sha1-uGvV8MJWkJEcdZD8v8IBDVSzzLg=
-  dependencies:
-    p-try "^1.0.0"
-
-p-locate@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/p-locate/download/p-locate-2.0.0.tgz#20a0103b222a70c8fd39cc2e580680f3dde5ec43"
-  integrity sha1-IKAQOyIqcMj9OcwuWAaA893l7EM=
-  dependencies:
-    p-limit "^1.1.0"
-
 p-queue@^6.3.0:
   version "6.4.0"
   resolved "https://registry.npm.taobao.org/p-queue/download/p-queue-6.4.0.tgz#5050b379393ea1814d6f9613a654f687d92c0466"
@@ -2323,11 +2297,6 @@ p-timeout@^3.1.0:
   dependencies:
     p-finally "^1.0.0"
 
-p-try@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.npm.taobao.org/p-try/download/p-try-1.0.0.tgz#cbc79cdbaf8fd4228e13f621f2b1a237c1b207b3"
-  integrity sha1-y8ec26+P1CKOE/Yh8rGiN8GyB7M=
-
 parse-json@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npm.taobao.org/parse-json/download/parse-json-4.0.0.tgz#be35f5425be1f7f6c747184f98a788cb99477ee0"
@@ -2335,11 +2304,6 @@ parse-json@^4.0.0:
   dependencies:
     error-ex "^1.3.1"
     json-parse-better-errors "^1.0.1"
-
-path-exists@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.npm.taobao.org/path-exists/download/path-exists-3.0.0.tgz#ce0ebeaa5f78cb18925ea7d810d7b59b010fd515"
-  integrity sha1-zg6+ql94yxiSXqfYENe1mwEP1RU=
 
 path-parse@^1.0.6:
   version "1.0.6"
@@ -2365,13 +2329,6 @@ pify@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npm.taobao.org/pify/download/pify-5.0.0.tgz#1f5eca3f5e87ebec28cc6d54a0e4aaf00acc127f"
   integrity sha1-H17KP16H6+wozG1UoOSq8ArMEn8=
-
-pkg-up@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.npm.taobao.org/pkg-up/download/pkg-up-2.0.0.tgz#c819ac728059a461cab1c3889a2be3c49a004d7f"
-  integrity sha1-yBmscoBZpGHKscOImivjxJoATX8=
-  dependencies:
-    find-up "^2.1.0"
 
 postcss-calc@^7.0.1:
   version "7.0.2"
@@ -2984,16 +2941,6 @@ rollup-plugin-terser@^7.0.2:
     serialize-javascript "^4.0.0"
     terser "^5.0.0"
 
-rollup-plugin-uglify@^6.0.4:
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/rollup-plugin-uglify/-/rollup-plugin-uglify-6.0.4.tgz#65a0959d91586627f1e46a7db966fd504ec6c4e6"
-  integrity sha512-ddgqkH02klveu34TF0JqygPwZnsbhHVI6t8+hGTcYHngPkQb5MIHI0XiztXIN/d6V9j+efwHAqEL7LspSxQXGw==
-  dependencies:
-    "@babel/code-frame" "^7.0.0"
-    jest-worker "^24.0.0"
-    serialize-javascript "^2.1.2"
-    uglify-js "^3.4.9"
-
 rollup-pluginutils@^2.8.1, rollup-pluginutils@^2.8.2:
   version "2.8.2"
   resolved "https://registry.npm.taobao.org/rollup-pluginutils/download/rollup-pluginutils-2.8.2.tgz#72f2af0748b592364dbd3389e600e5a9444a351e"
@@ -3044,11 +2991,6 @@ semver@^5.4.1, semver@^5.5.0, semver@^5.6.0:
   version "5.7.1"
   resolved "https://registry.npm.taobao.org/semver/download/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
   integrity sha1-qVT5Ma66UI0we78Gnv8MAclhFvc=
-
-serialize-javascript@^2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/serialize-javascript/-/serialize-javascript-2.1.2.tgz#ecec53b0e0317bdc95ef76ab7074b7384785fa61"
-  integrity sha512-rs9OggEUF0V4jUSecXazOYsLfu7OGK2qIn3c7IPBiffz32XniEp/TX9Xmc9LQfK2nQ2QKHvZ2oygKUGU0lG4jQ==
 
 serialize-javascript@^4.0.0:
   version "4.0.0"
@@ -3335,11 +3277,6 @@ ua-parser-js@^0.7.18:
   version "0.7.22"
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.22.tgz#960df60a5f911ea8f1c818f3747b99c6e177eae3"
   integrity sha512-YUxzMjJ5T71w6a8WWVcMGM6YWOTX27rCoIQgLXiWaxqXSx9D7DNjiGWn1aJIRSQ5qr0xuhra77bSIh6voR/46Q==
-
-uglify-js@^3.4.9:
-  version "3.11.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.11.4.tgz#b47b7ae99d4bd1dca65b53aaa69caa0909e6fadf"
-  integrity sha512-FyYnoxVL1D6+jDGQpbK5jW6y/2JlVfRfEeQ67BPCUg5wfCjaKOpr2XeceE4QL+MkhxliLtf5EbrMDZgzpt2CNw==
 
 unicode-canonical-property-names-ecmascript@^1.0.4:
   version "1.0.4"
