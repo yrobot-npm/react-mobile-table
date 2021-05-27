@@ -19,7 +19,7 @@
 	},
 	"scripts": {
 		"start": "rollup -c",
-		"build": "NODE_ENV=production && rm -rf lib && rm -rf src/lib && rollup -c"
+		"build": "NODE_ENV=production && rm -rf lib && rollup -c"
 	},
 	"repository": {
 		"type": "git",
